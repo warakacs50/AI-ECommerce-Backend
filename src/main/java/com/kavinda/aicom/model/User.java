@@ -3,7 +3,7 @@ package com.kavinda.aicom.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 
-import javax.management.relation.Role;
+
 import java.util.Set;
 
 @Entity
