@@ -81,7 +81,7 @@ public class ProductService {
     }
 
     @Transactional
-    public  Product updateProduct(Integer sellerId, Integer productId) {
+    public  Product updateProduct(Integer sellerId, Integer productId , Product product) {
 
         //1. fetch user
 
@@ -89,7 +89,7 @@ public class ProductService {
                 .orElseThrow(() -> new RuntimeException("invalid useer id "));
 
         //2. Fetch product
-        Product product = productRepository.findById(productId)
+        Product product1 = productRepository.findById(productId)
                 .orElseThrow(() -> new RuntimeException("Product not found"));
 
         //3.authrization check
